@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+ Author: Mikala Spencer
+ Class:  Software Engineering
+ Project: Lab 2 / Expressions
+ Description: This is the expression comparison and is being submitted as part of Lab 2.
+-->
+
+
+<head>
+     <!-- CSS content -->
+     <style type="text/css">
+     body
+     {
+         background-color: bisque;
+     }
+     h1
+     {
+         text-align: left;
+     }
+     p1
+     {
+         text-align: left;
+     }
+     </style> 
+</head>
+
+<body>
+    <h1>
+        Regular Expressions
+    </h1>
+
+    <p>
+    <!-- Input fields -->
+    Expression: <input id="valid1" type="text" value="" size="10">
+
+    <br>
+
+    Regular Expression: <input id="valid2" type="text" value="" size="10">
+
+    <br><br>
+
+     <!-- Create a button that allows the user to comapre the expressions -->
+     <button onclick="Validate()">Submit</button>
+
+     <br><br>
+
+    <p id="demo"></p>
+
+    <!-- JavaScript content -->
+    <script>
+        function Validate()
+        {
+            var str = document.getElementById("valid1");
+
+            var regex = RegExp('foo*');
+            var globalRegex = RegExp('foo*', 'g');
+
+            var result = regex.test(str);
+            var result2 = globalRegex.test(str);
+            document.getElementById("demo").innerHTML = result;
+        }
+    </script>
+    </p>
+</body>
+
+</html>

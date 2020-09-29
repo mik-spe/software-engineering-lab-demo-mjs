@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+ Author: Mikala Spencer
+ Class:  Software Engineering
+ Project: Lab 2 / Dice Roller
+ Description: This is the first version of my Dice Roller application and is being submitted as part of Lab 2.
+-->
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Dice Roller</title>
+        <link rel="stylesheet" href="dice.css">
+        <script src="dice.js"></script>
+    </head>
+
+    <!-- Call the dice function from jc file so it rolls when the page loads -->
+    <body onload="rollDice()">
+        <h1>
+            Welcome to the Dice Roller
+        </h1>
+
+        <p>
+            Click on the button to roll the six-sided dice.
+        </p>
+
+        <!-- Create a button that allows the user to hit "enter" to reroll -->
+        <button type="button" autofocus onclick="rollDice()">Roll Dice</button>
+
+        <br><br>
+
+        <!-- Display the result of the dice roll -->
+        Result: <input id="dice" type="text" value="" size="5" disabled>
+
+        <br><br>
+    </body>
+
+</html>
